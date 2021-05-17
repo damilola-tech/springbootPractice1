@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class StudentService {
+public class  StudentService {
 
     private final StudentRepository studentRepository;
 
@@ -50,7 +50,7 @@ public class StudentService {
          boolean exists = studentRepository.existsById(studentId);
          if(!exists) {
              throw new IllegalStateException(
-                     "student with id " + studentId + " does not exists")
+                     "student with id " + studentId + " does not exists");
          }
         studentRepository.deleteById(studentId);
     }
@@ -80,3 +80,4 @@ public class StudentService {
         }
     }
 }
+
